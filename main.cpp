@@ -17,6 +17,7 @@ typedef union header header_t;
 header_t *head = nullptr, *tail = nullptr;
 pthread_mutex_t global_malloc_lock;
 
+
 void *malloc(size_t size)
 {
     void *block = VirtualAlloc(nullptr, size, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
